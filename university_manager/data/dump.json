@@ -1,0 +1,14 @@
+{
+	"Students": [{
+		"firstname": "John",
+		"lastname": "Green"
+	}, {
+		"firstname": "Susan",
+		"lastname": "Brown"
+	}],
+	"Courses": [{
+		"name": "ICT Systems management and integration"
+	}, {
+		"name": "Algorithms and data structures"
+	}]
+}
