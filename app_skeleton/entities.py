@@ -15,7 +15,47 @@ helllloooooooooo
 ### Begin entities declaration
 #######################################################
 
+class Book(db.Entity):
+id = PrimaryKey(int, auto=True)
+title = Required(str)
+year = Required(int)
+author = Required('Author')
+publisher = Required('Publisher')
+genre = Required('Genre')
+order = Required('Order')
 
+class Author(db.Entity):
+id = PrimaryKey(int, auto=True)
+book = Set(Book)
+Firstname = Required(str)
+Lastname = Required(str)
+
+class Publisher(db.Entity):
+id = PrimaryKey(int, auto=True)
+name = Required(str)
+country = Required(str)
+books = Set(Book)
+
+class Genre(db.Entity):
+id = PrimaryKey(int, auto=True)
+name = Required(str)
+books = Set(Book)
+
+class Customer(db.Entity):
+id = PrimaryKey(int, auto=True)
+name = Required(str)
+lastname = Required(str)
+phonenumber = Optional(int)
+address = Required(str)
+city = Required(str)
+country = Required(str)
+orders = Set('Order')
+
+class Order(db.Entity):
+id = PrimaryKey(int, auto=True)
+dop = Required(date)
+customer = Required(Customer)
+books = Set(Book)
 
 #######################################################
 ### END entities declaration
