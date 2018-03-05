@@ -56,6 +56,7 @@ class Order(db.Entity):
     dop = Required(date)
     customer = Required(Customer)
     books = Set(Book)
+
 db.bind('sqlite', config.DB_FILE_NAME, create_db=True)
 
 # create the tables
