@@ -10,6 +10,7 @@ We will be using PonyORM; please, refer to http:ponyorm.com for more info.
 # instance of the class Database to create and map tables
 db = Database()
 
+helllloooooooooo
 #######################################################
 ### Begin entities declaration
 #######################################################
